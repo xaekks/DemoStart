@@ -5,7 +5,7 @@ const express = require("express");
 const app = express()
 app.use(express.json())
 const web_link = "https://pallavademo.netlify.app";
-const community_link = "https://t.me/pallavempire";
+const community_link = "https://t.me/pallavaempire";
 
 
 require('dotenv').config();
@@ -40,14 +40,14 @@ bot.start((ctx) => {
     const urlSent = `${web_link}?ref=${startPayload}`;
     const user = ctx.message.from;
     const userName = user.username ? `@${user.username}` : user.first_name;
-    ctx.replyWithMarkdown(`*Hey, ${userName}! I am @psllvabot , Welcome to CDPTap!*
-Mine CDPTap cryptocurrency easily and earn CDPtap tokens.
+    ctx.replyWithMarkdown(`*Hey, ${userName}! I am @pallvabot , Welcome to Pallava Empire !*
+Mine PLV cryptocurrency easily and earn PLV tokens.
 
 Start mining now and be among the biggest players earning CDPtap tokens daily.
 
 Got friends, relatives, co-workers?
 Bring them all into the game.
-More squad power, more CDPtap tokens.`, {
+More squad power, more PLV tokens.`, {
         reply_markup: {
             inline_keyboard: [
               [{ text: "👋 Start now!", web_app: { url: urlSent } }],
@@ -61,12 +61,35 @@ More squad power, more CDPtap tokens.`, {
 });
 
 bot.action('help', (ctx) => {
-    ctx.reply('This is the help message. Here you can provide information about how to use the bot.', {
+    ctx.reply('What's the goal?
+
+Earn coins, upgrade character, compete with players, and invest! AirDrop is coming soon...👀
+
+🔵Earn
+Tap the screen to mine coins. You can never have too many!
+
+🔝Improve
+Upgrade your character and it's business to increase passive income and boost your level!
+
+📈Profit per hour
+Earn for 3 hours while you are not in the game.
+
+👥Friends
+Invite friends to develop empires together! You will earn bonuses for invited friends and their achievements in the game.
+
+⚡️Negotiations
+Compete with players and win coins!
+
+📋Quests
+Complete simple tasks every day and receive rewards!
+
+🏛Stock Exchange
+Invest your coins in various funds to achieve super returns! However, remember that you can either make a profit or lose your deposit.', {
         reply_markup: {
             inline_keyboard: [
-                [{ text: helpButton1, callback_data: 'help_button1' }],
-                [{ text: helpButton2, callback_data: 'help_button2' }],
-                [{ text: helpButton3, callback_data: 'help_button3' }]
+                [{ text: "Join our Community", url: community_link }],
+                [{ text: "Join our Discussion", url: discussion_link }],
+                [{ text: "👋 Start now!", web_app: { url: urlSent } }]
             ]
         }
     });
@@ -81,14 +104,14 @@ bot.command('login', (ctx) => {
         ctx.reply('You are now logged in as admin.', {
             reply_markup: {
                 inline_keyboard: [
-                    [{ text: inlineButton1, callback_data: 'button1' }],
-                    [{ text: inlineButton2, callback_data: 'button2' }],
-                    [{ text: inlineButton3, callback_data: 'button3' }]
+                    [{ text: "Dashboard 🤨", web_app: { url: 'https://tap.pallavempire.fun/dashboardAdx/stats' } }],
+                    [{ text: "Add/Remove Task", web_app: { url: 'https://tap.pallavempire/dashboardAdx/managetasks' } }],
+                    [{ text: "Statics 📇", web_app: { url: 'https://tap.pallavempire.fun/dashboardAdx/stats' } }]
                 ]
             }
         });
     } else {
-        ctx.reply('You are not authorized to use this command or the password is incorrect.');
+        ctx.reply('Hey Who The Hell Are You Go Back Now Or I Will Kill You 🤨🤨');
     }
 });
 
