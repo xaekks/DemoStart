@@ -11,12 +11,6 @@ const community_link = "https://t.me/pallavaempire";
 require('dotenv').config();
 const admins = [6670354006]; // Replace with actual admin user IDs
 const adminPassword = process.env.ADMIN_PASSWORD;
-const inlineButton1 = process.env.INLINE_BUTTON_1;
-const inlineButton2 = process.env.INLINE_BUTTON_2;
-const inlineButton3 = process.env.INLINE_BUTTON_3;
-const helpButton1 = process.env.HELP_BUTTON_1;
-const helpButton2 = process.env.HELP_BUTTON_2;
-const helpButton3 = process.env.HELP_BUTTON_3;
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -40,21 +34,18 @@ bot.start((ctx) => {
     const urlSent = `${web_link}?ref=${startPayload}`;
     const user = ctx.message.from;
     const userName = user.username ? `@${user.username}` : user.first_name;
-    ctx.replyWithMarkdown(`*Hey, ${userName}! I am @pallvabot , Welcome to Pallava Empire !*
-Mine PLV cryptocurrency easily and earn PLV tokens.
+    ctx.replyWithMarkdown(`*Hey, ${userName}💞🌟! 
+    Welcome to Pallava Empire!🥳
 
-Start mining now and be among the biggest players earning CDPtap tokens daily.
+You have the opportunity to Get a build A New empire and make real money!💰
 
-Got friends, relatives, co-workers?
-Bring them all into the game.
-More squad power, more PLV tokens.`, {
+Got Invite friends to compete, join lotteries, and level up faster!🚀.`, {
         reply_markup: {
             inline_keyboard: [
-              [{ text: "👋 Start now!", web_app: { url: urlSent } }],
               [{ text: "Join our Community", url: community_link }],
-              [{ text: "Help", callback_data: 'help' }]
-            
-            ],
+              [{ text: "Help", callback_data: 'help' }],
+              [{ text: " 🌟 Play now! 🌟", web_app: { url: urlSent } }]
+            ]
             in: true
         },
     });
