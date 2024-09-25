@@ -4,7 +4,7 @@ const bot = new Telegraf(TOKEN);
 const express = require("express");
 const app = express()
 app.use(express.json())
-const web_link = "https://pallavdemo.netlify.app";
+const web_link = "https://tap.pallavempire.fun";
 const community_link = "https://t.me/pallavaempire";
 const discussion_link = "https://t.me/pallavaempire";
 
@@ -35,25 +35,18 @@ bot.start((ctx) => {
     const urlSent = `${web_link}?ref=${startPayload}`;
     const user = ctx.message.from;
     const userName = user.username ? `@${user.username}` : user.first_name;
-    const userId = user.id;
-    const accName = user.first_name + ' ' + (user.last_name || '');
-    const dateTime = new Date().toLocaleString();
-    const logMessage = `#ɴᴇᴡ_ᴜꜱᴇʀ\n\n◉ ᴜꜱᴇʀ-ɪᴅ: ${userId}\n◉ ᴀᴄᴄ-ɴᴀᴍᴇ: ${accName}\n◉ ᴜꜱᴇʀɴᴀᴍᴇ: ${userName}\n◉ ᴅᴀᴛᴇ/ᴛɪᴍᴇ: ${dateTime}`;
-    ctx.telegram.sendMessage(process.env.LOG_CHANNEL, logMessage);
-    ctx.replyWithMarkdown(`*Hey, ${userName}💞🌟!*
+    ctx.replyWithMarkdown(`*Hey, ${userName}💞🌟! 
+    Welcome to Pallava Empire!🥳
 
-*Welcome to Pallava Empire!🥳*
+You have the opportunity to Get a build A New empire and make real money!💰
 
-You have the opportunity to build a new empire and make real money!💰
-
-Invite friends to compete, join lotteries, and level up faster!🚀.`, {
+Got Invite friends to compete, join lotteries, and level up faster!🚀.`, {
         reply_markup: {
             inline_keyboard: [
               [{ text: "📌 Join our Community 📌", url: community_link }],
-              [{ text: "🚁 Help 🚁", callback_data: 'help' }],
-              [{ text: " 🌟 Play now! 🌟", web_app: { url: urlSent } }]
+              [{ text: " 🚁 Help 🚁", callback_data: 'help' }],
+              [{ text: " Play now! 🌟", web_app: { url: urlSent } }]
             ]
-
         },
     });
 });
