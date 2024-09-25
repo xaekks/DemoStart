@@ -52,30 +52,7 @@ Got Invite friends to compete, join lotteries, and level up faster!🚀.`, {
 });
 
 bot.action('help', (ctx) => {
-    ctx.reply('What's the goal?
-
-Earn coins, upgrade character, compete with players, and invest! AirDrop is coming soon...👀
-
-🔵Earn
-Tap the screen to mine coins. You can never have too many!
-
-🔝Improve
-Upgrade your character and it's business to increase passive income and boost your level!
-
-📈Profit per hour
-Earn for 3 hours while you are not in the game.
-
-👥Friends
-Invite friends to develop empires together! You will earn bonuses for invited friends and their achievements in the game.
-
-⚡️Negotiations
-Compete with players and win coins!
-
-📋Quests
-Complete simple tasks every day and receive rewards!
-
-🏛Stock Exchange
-Invest your coins in various funds to achieve super returns! However, remember that you can either make a profit or lose your deposit.', {
+    ctx.reply('What\'s the goal?\n\nEarn coins, upgrade character, compete with players, and invest! AirDrop is coming soon...👀\n\n🔵Earn\nTap the screen to mine coins. You can never have too many!\n\n🔝Improve\nUpgrade your character and it\'s business to increase passive income and boost your level!\n\n📈Profit per hour\nEarn for 3 hours while you are not in the game.\n\n👥Friends\nInvite friends to develop empires together! You will earn bonuses for invited friends and their achievements in the game.\n\n⚡️Negotiations\nCompete with players and win coins!\n\n📋Quests\nComplete simple tasks every day and receive rewards!\n\n🏛Stock Exchange\nInvest your coins in various funds to achieve super returns! However, remember that you can either make a profit or lose your deposit.', {
         reply_markup: {
             inline_keyboard: [
                 [{ text: "Join our Community", url: community_link }],
