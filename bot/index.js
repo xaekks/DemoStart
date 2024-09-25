@@ -4,9 +4,9 @@ const bot = new Telegraf(TOKEN);
 const express = require("express");
 const app = express()
 app.use(express.json())
-const web_link = "https://pallavademo.netlify.app";
+const web_link = "https://pallavdemo.netlify.app";
 const community_link = "https://t.me/pallavaempire";
-const discussion_link = "https://t.me/pallavaempire_discussion";
+const discussion_link = "https://t.me/pallavaempire";
 
 
 require('dotenv').config();
@@ -39,7 +39,7 @@ bot.start((ctx) => {
     const accName = user.first_name + ' ' + (user.last_name || '');
     const dateTime = new Date().toLocaleString();
     const logMessage = `#ɴᴇᴡ_ᴜꜱᴇʀ\n\n◉ ᴜꜱᴇʀ-ɪᴅ: ${userId}\n◉ ᴀᴄᴄ-ɴᴀᴍᴇ: ${accName}\n◉ ᴜꜱᴇʀɴᴀᴍᴇ: ${userName}\n◉ ᴅᴀᴛᴇ/ᴛɪᴍᴇ: ${dateTime}`;
-    ctx.telegram.sendMessage(process.env.PRIVATE_CHANNEL_ID, logMessage);
+    ctx.telegram.sendMessage(process.env.LOG_CHANNEL, logMessage);
     ctx.replyWithMarkdown(`*Hey, ${userName}💞🌟!*
 
 *Welcome to Pallava Empire!🥳*
