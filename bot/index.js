@@ -35,11 +35,6 @@ bot.start((ctx) => {
     const urlSent = `${web_link}?ref=${startPayload}`;
     const user = ctx.message.from;
     const userName = user.username ? `@${user.username}` : user.first_name;
-    const userId = user.id;
-    const accName = user.first_name + ' ' + (user.last_name || '');
-    const dateTime = new Date().toLocaleString();
-    const logMessage = `#ɴᴇᴡ_ᴜꜱᴇʀ\n\n◉ ᴜꜱᴇʀ-ɪᴅ: ${userId}\n◉ ᴀᴄᴄ-ɴᴀᴍᴇ: ${accName}\n◉ ᴜꜱᴇʀɴᴀᴍᴇ: ${userName}\n◉ ᴅᴀᴛᴇ/ᴛɪᴍᴇ: ${dateTime}`;
-    ctx.telegram.sendMessage(process.env.PRIVATE_CHANNEL_ID, logMessage);
     ctx.replyWithMarkdown(`*Hey, ${userName}💞🌟!*
 
 *Welcome to Pallava Empire!🥳*
