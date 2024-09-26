@@ -45,8 +45,8 @@ Invite friends to compete, join lotteries, and level up faster!🚀.`, {
         reply_markup: {
             inline_keyboard: [
               [{ text: "✌️ Join our Community ✌️", url: community_link }],
-              [{ text: " 🚁 nHelp 🚁", callback_data: 'help' }],
-              [{ text: " 🌟 Play ✨", web_app: { url: urlSent } }]
+              [{ text: " 🚁 Help 🚁", callback_data: 'help' }],
+              [{ text: "  🍻Play🍻 ", web_app: { url: urlSent } }]
             ]
 
         },
