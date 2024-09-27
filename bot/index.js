@@ -4,7 +4,7 @@ const bot = new Telegraf(TOKEN);
 const express = require("express");
 const app = express()
 app.use(express.json())
-const web_link = "https://tap.pallavempire.fun";
+const web_link = "https://game.pallavempire.fun";
 const community_link = "https://t.me/pallavaempire";
 const discussion_link = "https://t.me/pallavaempire";
 
@@ -80,9 +80,9 @@ bot.command('login', (ctx) => {
         ctx.reply('You are now logged in as admin.', {
             reply_markup: {
                 inline_keyboard: [
-                    [{ text: "Dashboard 🤨", web_app: { url: 'https://tap.pallavempire.fun/dashboardAdx/stats' } }],
-                    [{ text: "Add/Remove Task", web_app: { url: 'https://tap.pallavempire/dashboardAdx/managetasks' } }],
-                    [{ text: "Statics 📇", web_app: { url: 'https://tap.pallavempire.fun/dashboardAdx/stats' } }]
+                    [{ text: "Dashboard 🤨", web_app: { url: 'https://game.pallavempire.fun/dashboardAdx/stats' } }],
+                    [{ text: "Add/Remove Task", web_app: { url: 'https://game.pallavempire/dashboardAdx/managetasks' } }],
+                    [{ text: "Statics 📇", web_app: { url: 'https://game.pallavempire.fun/dashboardAdx/stats' } }]
                 ]
             }
         });
