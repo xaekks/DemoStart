@@ -45,7 +45,7 @@ Invite friends to compete, join lotteries, and level up faster!🚀.`, {
         reply_markup: {
             inline_keyboard: [
               [{ text: "✌️ Join our Community ✌️", url: community_link }],
-              [{ text: "☃️ How To Earn Token ☃️", callback_data: 'help' }],
+              [{ text: "☃️ How To Earn  ☃️", callback_data: 'help' }],
               [{ text: "❄️  Play ❄️ ", web_app: { url: urlSent } }]
             ]
 
