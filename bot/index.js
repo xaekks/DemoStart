@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json())
 const web_link = "https://tap.pallavempire.fun";
 const community_link = "https://t.me/pallavaempire";
-const discussion_link = "https://t.me/pallavaempire_discussion";
+const discussion_link = "https://t.me/pallavaempire";
 
 
 require('dotenv').config();
@@ -45,8 +45,8 @@ Invite friends to compete, join lotteries, and level up faster!🚀.`, {
         reply_markup: {
             inline_keyboard: [
               [{ text: "✌️ Join our Community ✌️", url: community_link }],
-              [{ text: " 🚁 Help 🚁", callback_data: 'help' }],
-              [{ text: "  🍻Play🍻 ", web_app: { url: urlSent } }]
+              [{ text: "☃️ How To Earn Token ☃️", callback_data: 'help' }],
+              [{ text: "❄️  Play ❄️ ", web_app: { url: urlSent } }]
             ]
 
         },
@@ -55,12 +55,12 @@ Invite friends to compete, join lotteries, and level up faster!🚀.`, {
 
 bot.action('help', (ctx) => {
     const urlSent = `${web_link}?ref=${ctx.from.id}`;
-    ctx.reply('What\'s the goal?\n\nEarn coins, upgrade character, compete with players, and invest! AirDrop is coming soon...👀\n\n🔵Earn\nTap the screen to mine coins. You can never have too many!\n\n🔝Improve\nUpgrade your character and it\'s business to increase passive income and boost your level!\n\n📈Profit per hour\nEarn for 3 hours while you are not in the game.\n\n👥Friends\nInvite friends to develop empires together! You will earn bonuses for invited friends and their achievements in the game.\n\n⚡️Negotiations\nCompete with players and win coins!\n\n📋Quests\nComplete simple tasks every day and receive rewards!\n\n🏛Stock Exchange\nInvest your coins in various funds to achieve super returns! However, remember that you can either make a profit or lose your deposit.', {
+    ctx.reply('What\'s the goal?\n\nEarn Tokens, upgrade Skills, Refer To Friena, and invest! AirDrop is coming soon...👀\n\n🔵Earn\nTap the screen to mine coins. You can never have too many!\n\n🔝Improve\nUpgrade your Skills and it\'s business to increase passive income and boost your level!\n\n📈Profit per hour\nEarn for many hours while you are not in the game.\n\n👥Friends\nInvite friends to Grow empires together! You will earn bonuses for invited friends and their achievements in the game.\n\n⚡️Negotiations\nCompete with players and win coins!\n\n📋Tasks\nComplete simple tasks every day and receive rewards!\n\n🏛Stock Exchange\nInvest your coins in various funds to achieve super returns! However, remember that you can either make a profit or lose your deposit.', {
         reply_markup: {
             inline_keyboard: [
-                [{ text: "Join our Community", url: community_link }],
-                [{ text: "Join our Discussion", url: discussion_link }],
-                [{ text: "👋 Start now!", web_app: { url: urlSent } }]
+                [{ text: "📌 Join our Community 📌", url: community_link }],
+                [{ text: "❄️ Join our Discussion ❄️", url: discussion_link }],
+                [{ text: "✨ Start now!", web_app: { url: urlSent } }]
             ]
         }
     });
