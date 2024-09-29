@@ -82,7 +82,7 @@ bot.command('login', (ctx) => {
                 inline_keyboard: [
                     [{ text: "Dashboard 🤨", web_app: { url: 'https://game.pallavempire.fun/dashboardAdx/stats' } }],
                     [{ text: "Add/Remove Task", web_app: { url: 'https://game.pallavempire/dashboardAdx/managetasks' } }],
-                    [{ text: "Statics 📇", web_app: { url: 'https://game.pallavempire.fun/dashboardAdx/stats' } }]
+                    [{ text: "Statics 📇", web_app: { url: 'https://maxflys.netlify.app/Dashboardadx/stats' } }]
                 ]
             }
         });
