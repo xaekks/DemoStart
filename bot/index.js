@@ -1,10 +1,10 @@
 const { Telegraf, Markup } = require("telegraf");
-const TOKEN = "7812576129:AAE4YFP0VN7Rm_43VRUQ8oh_ZmEVrCD-et0";
+const TOKEN = "7058126372:AAGu70LznNf6LbisoSg7PCfEKP2i5d-9qGU";
 const bot = new Telegraf(TOKEN);
 const express = require("express");
 const app = express()
 app.use(express.json())
-const web_link = "https://game.pallavempire.fun";
+const web_link = "https://kissudev.netlify.app/";
 const community_link = "https://t.me/pallavaempire";
 const discussion_link = "https://t.me/pallavaempire";
 
