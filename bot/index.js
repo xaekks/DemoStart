@@ -5,9 +5,7 @@ const express = require("express");
 const app = express()
 app.use(express.json())
 const web_link = "https://gojotap.netlify.app";
-const community_link = "https://t.me/gojotap_bot";
-const invite_link = "https://t.me/gojotap_bot?start=r${id}";
-const applink = "https://play.google.com/store/apps/details?id=io.cex.app.prod";
+const community_link = "https://t.me/kissudev";
 
 bot.start((ctx) => {
     const startPayload = ctx.startPayload;
@@ -26,9 +24,7 @@ More squad power, more CDPtap tokens.`, {
             inline_keyboard: [
               [{ text: "👋 Start now!", web_app: { url: urlSent } }],
               [{ text: "Join our Community", url: community_link }]
-              [{ text: "Invite a Friend", url: invite_link }]
-              [{ text: "Invite a Friend", url: applink }]
-            
+             
             ],
             in: true
         },
